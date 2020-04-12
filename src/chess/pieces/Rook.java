@@ -23,7 +23,7 @@ public class Rook extends ChessPiece {
 		
 		//verificando acima da peça
 		p.setValues(position.getRow()-1,position.getColumn());
-		while (getBoard().positionExists(p)&&!getBoard().thereIsAPiece(p)) { 
+		while (getBoard().positionExists(p)&&!getBoard().thereIsAPiece(p)) { //enquanto a posição existir e estiver vaga marca ela como verdadeira
 			mat[p.getRow()][p.getColumn()]=true; //marca como verdadeiro a posição na matriz indicando que a peça pode mover para esse lugar
 			p.setRow(p.getRow()-1); //fazer a linha subir
 		}
